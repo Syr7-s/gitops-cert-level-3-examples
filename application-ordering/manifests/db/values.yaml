@@ -1,4 +1,18 @@
 mariadb:
+ image:
+    registry: docker.io
+    repository: bitnamilegacy/mariadb
+    tag: 10.6.8-debian-11-r9
+  volumePermissions:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/os-shell
+      tag: 11-debian-11-r99
+  metrics:
+    image:
+      registry: docker.io
+      repository: bitnamilegacy/mysqld-exporter
+      tag: 0.14.0-debian-11-r9
   architecture: "standalone"
   auth:
     database: "demo"
